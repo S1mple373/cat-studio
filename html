@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котостудия — Фотосессии для котиков</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand logo-text" href="#">Котостудия</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#booking">Записаться</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Секция О нас -->
+    <main class="content-wrapper">
+        <section id="about" class="container py-5 text-center">
+            <h1 class="display-4 accent-title">Мы фотографируем котиков</h1>
+            <p class="lead">Добро пожаловать в «Котостудию» — пространство, где пушистики становятся моделями!</p>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Галерея (Grid/Flexbox) -->
+        <section id="gallery" class="container py-5">
+            <h2 class="text-center accent-title mb-4">Галерея</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="cat-card">
+                        <img src="https://unsplash.com" alt="Котик 1" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cat-card">
+                        <img src="https://unsplash.com" alt="Котик 2" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cat-card">
+                        <img src="https://unsplash.com" alt="Котик 3" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Форма записи -->
+        <section id="booking" class="container py-5">
+            <h2 class="text-center accent-title mb-4">Записаться на фотосессию</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="regForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label">Имя:</label>
+                            <input type="text" class="form-control" required minlength="2">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email:</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Имя котика:</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary px-4">Записаться</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="m-0">&copy; 2025 Котостудия. Мурлычем с любовью 🐾</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://jsdelivr.net"></script>
+    <script>
+        // Валидация формы
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+</html>
