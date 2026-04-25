@@ -1,0 +1,60 @@
+// Переменные цвета
+$primary-pink: #fce4ec;
+$accent-pink: #e91e63;
+$dark-bg: #212529;
+
+body {
+  background-color: $primary-pink;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #333;
+}
+
+.logo-text {
+  color: $accent-pink !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.accent-title {
+  color: $accent-pink;
+  font-weight: 600;
+}
+
+.divider {
+  border-top: 2px solid rgba($accent-pink, 0.2);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cat-card {
+  transition: transform 0.3s ease;
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  &:focus {
+    border-color: $accent-pink;
+    box-shadow: 0 0 0 0.25rem rgba($accent-pink, 0.25);
+  }
+}
+
+.btn-primary {
+  background-color: #0d6efd; // Синяя кнопка как на макете
+  border: none;
+  &:hover {
+    background-color: #0a58ca;
+  }
+}
+
+footer {
+  font-size: 0.9rem;
+}
